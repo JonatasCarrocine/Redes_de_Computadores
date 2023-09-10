@@ -1,4 +1,4 @@
-# Chat Java em Socket
+# Chat Java with Socket
 
 This is a project about a creation of a Java chat using sockets for communication between a server and a client.
 With this code, you can see whenever the client starts, the server says the client entered, and receives and send messages when the client write something.
