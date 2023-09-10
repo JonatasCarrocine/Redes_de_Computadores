@@ -23,3 +23,4 @@ This is a project about a creation of a Java chat using sockets for communicatio
 ```
   java Client
 ```
+- After that, write anything and you'll see they communicating, if you want to close the connection, just write "tchau". Enjoy!
