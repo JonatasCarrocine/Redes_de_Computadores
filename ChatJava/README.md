@@ -13,3 +13,13 @@ This is a project about a creation of a Java chat using sockets for communicatio
   javac Client.java
   javac Server.java
 ```
+
+- Start the server
+```
+  java Server
+```
+
+- Start the client
+```
+  java Client
+```
