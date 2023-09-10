@@ -9,43 +9,44 @@ import java.net.Socket;
 public class Server {
     public static void main (String[] args) throws IOException{
         Socket socket = null;
-        InputStreamReader inputStreamReader = null;
-        OutputStreamWriter outputStreamWriter = null;
-        BufferedReader bufferedReader = null;
-        BufferedWriter bufferedWriter = null;
-        ServerSocket serverSocket = null;
+        InputStreamReader entradaConexao = null;
+        OutputStreamWriter saidaConexao = null;
+        BufferedReader leituraDados = null;
+        BufferedWriter escritaDados = null;
+        ServerSocket serverSocket = new ServerSocket(7070); //servidor cria um serversocket na porta 7070
 
-        serverSocket = new ServerSocket(1234);
-
+        /*Aguarda conexoes de clientes*/
         while(true){
             try{
-                socket = serverSocket.accept();
+                socket = serverSocket.accept(); //aceita conexao com o cliente
 
-                inputStreamReader = new InputStreamReader(socket.getInputStream());
-                outputStreamWriter = new OutputStreamWriter(socket.getOutputStream());
+                entradaConexao = new InputStreamReader(socket.getInputStream()); //configura entrada da conexao
+                saidaConexao = new OutputStreamWriter(socket.getOutputStream()); //configura saida da conexao
+                leituraDados = new BufferedReader(entradaConexao); 
+                escritaDados = new BufferedWriter(saidaConexao);
 
-                bufferedReader = new BufferedReader(inputStreamReader);
-                bufferedWriter = new BufferedWriter(outputStreamWriter);
+                System.out.println("Cliente entrou!"); //imprime na tela servidor que o cliente entrou
 
                 while(true){
-                    String msgFromClient = bufferedReader.readLine();
+                    String msgFromClient = leituraDados.readLine(); //recebe a mensagem enviada pelo cliente
 
-                    System.out.println("Client: "+msgFromClient);
+                    System.out.println("Cliente: "+msgFromClient); //Imprime a mensagem do cliente
+                    escritaDados.write("Mensagem recebida"); //Envia para o cliente que a mensagem foi recebida pelo servidor
+                    escritaDados.newLine();
+                    escritaDados.flush();
 
-                    bufferedWriter.write("MSG received");
-                    bufferedWriter.newLine();
-                    bufferedWriter.flush();
-
-                    if(msgFromClient.equalsIgnoreCase("Bye")){
+                    if(msgFromClient.equalsIgnoreCase("Tchau")){
+                        System.out.println("Cliente encerrou a conexao!"); //imprime na tela servidor que o cliente saiu
                         break;
                     }
                 }
 
+                //Fecha as conexoes
                 socket.close();
-                inputStreamReader.close();
-                outputStreamWriter.close();
-                bufferedReader.close();
-                bufferedWriter.close();
+                entradaConexao.close();
+                saidaConexao.close();
+                leituraDados.close();
+                escritaDados.close();
             }
             catch (IOException e){
                 e.printStackTrace();
