@@ -9,7 +9,7 @@ With this code, you can see whenever the client starts, the server says the clie
 
 ## Getting Started
 
-1. Open two CMD and compile the server class in one terminal and the client classe on another terminal
+1. Open two CMD and compile the server class in one terminal and the client class on another terminal
 ```
   javac Client.java
   javac Server.java
