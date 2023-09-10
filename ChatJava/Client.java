@@ -4,54 +4,38 @@ import java.util.Scanner;
 
 public class Client{
     public static void main (String[] args){
-        
+        //iniciacao das variaveis
         Socket socket = null;
-        InputStreamReader inputStreamReader = null;
-        OutputStreamWriter outputStreamWriter = null;
-        BufferedReader bufferedReader = null;
-        BufferedWriter bufferedWriter = null;
+        InputStreamReader entradaConexao = null;
+        OutputStreamWriter saidaConexao = null;
+        BufferedReader leituraDados = null;
+        BufferedWriter escritaDados = null;
 
         try{
-            socket = new Socket("localhost", 1234);
+            socket = new Socket("localhost", 7070); //cria conexao em localhost na porta 7070
 
-            inputStreamReader = new InputStreamReader(socket.getInputStream());
-            outputStreamWriter = new OutputStreamWriter(socket.getOutputStream());
-
-            bufferedReader = new BufferedReader(inputStreamReader);
-            bufferedWriter = new BufferedWriter(outputStreamWriter);
+            entradaConexao = new InputStreamReader(socket.getInputStream()); //configura nova entrada da conexao
+            saidaConexao = new OutputStreamWriter(socket.getOutputStream()); //configura nova saida da conexao
+            leituraDados = new BufferedReader(entradaConexao); //configura nova leitura de dados
+            escritaDados = new BufferedWriter(saidaConexao); //configura nova escrita de dados
 
             Scanner scanner = new Scanner(System.in);
 
             while(true){
-                String msgToSend = scanner.nextLine();
-                bufferedWriter.write(msgToSend);
-                bufferedWriter.newLine();
-                bufferedWriter.flush();
+                String msgToSend = scanner.nextLine(); //Ler linha
+                escritaDados.write(msgToSend); //Escreve e envia pro servidor
+                escritaDados.newLine();
+                escritaDados.flush();
                 
-                System.out.println("Server: "+bufferedReader.readLine());
+                System.out.println("Servidor: "+leituraDados.readLine()); //Imprime a mensagem do servidor, no qual ele enviou
 
-                if (msgToSend.equalsIgnoreCase("Bye")){
+                if (msgToSend.equalsIgnoreCase("Tchau")){ //Se tchau, encerra conexao
+                    System.out.println("Conexao encerrada!");
                     break;
                 }
             }
         }catch (IOException e){
             e.printStackTrace();
-        }finally{
-            try{
-                if(socket!=null)
-                    socket.close();
-                if(inputStreamReader!=null)
-                    inputStreamReader.close();
-                if(outputStreamWriter!=null)
-                    outputStreamWriter.close();
-                if(bufferedReader!=null)
-                    bufferedReader.close();
-                if(bufferedWriter!=null)
-                    bufferedWriter.close();
-            }
-            catch (IOException e){
-                e.printStackTrace();
-            }
         }
     }
 }
