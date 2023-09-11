@@ -43,7 +43,7 @@ public class Server {
                         break;
                     }
 
-                    System.out.println("Escrever pro cliente: ");
+                    System.out.print("Escrever pro cliente: ");
                     String msgFromServer = msgInput.nextLine();
                     if(msgFromServer != null){
                         escritaDados.write(msgFromServer);
