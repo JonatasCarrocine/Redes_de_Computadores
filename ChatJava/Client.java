@@ -22,12 +22,17 @@ public class Client{
             Scanner scanner = new Scanner(System.in);
 
             while(true){
+                System.out.println("Escreva uma msg:");
                 String msgToSend = scanner.nextLine(); //Ler linha
                 escritaDados.write(msgToSend); //Escreve e envia pro servidor
                 escritaDados.newLine();
                 escritaDados.flush();
                 
-                System.out.println("Servidor: "+leituraDados.readLine()); //Imprime a mensagem do servidor, no qual ele enviou
+                String msgFromServer = leituraDados.readLine();
+                if(msgFromServer != null){
+                    System.out.println("Servidor: "+leituraDados.readLine()); //Imprime a mensagem do servidor, no qual ele enviou
+                }
+                
 
                 if (msgToSend.equalsIgnoreCase("Tchau")){ //Se tchau, encerra conexao
                     System.out.println("Conexao encerrada!");
