@@ -1,1 +1,31 @@
-Hello
+# Web Server project with NAT
+
+This is a project about a creation of a Web Server using Apache, and 
+With this code, you can see whenever the client starts, the server says the client entered, and receives and send messages when the client write something.
+
+## Author
+
+ - Jonatas Carrocine
+
+## Getting Started
+
+1. Open two CMD and compile the server class in one terminal and the client class on another terminal
+```
+  javac Client.java
+  javac Server.java
+```
+
+2. Start the server
+```
+  java Server
+```
+
+3. Start the client
+```
+  java Client
+```
+4. After that, write anything and you'll see they communicating, if you want to close the connection, just write "tchau". Enjoy!
+
+## Hints
+
+- Server needs to run before you start the clients, otherwise you'll get an error 
