@@ -49,7 +49,7 @@ body {
     background: #fa6464;
     overflow: hidden;
     color: #FFF;
-	padding: 100px 0;
+	padding: 50px 0;
 }
 
 .contend-area .download-section h1{
@@ -90,9 +90,29 @@ body {
 }
 
 .contend-area .color-content {
-	padding: 90px 0 90px 60px;
+	padding: 20px 0 20px 10px;
 	background: #f6f6f4;
 	overflow: hidden;
+}
+
+.contend-area .color-content h6{
+	margin: 0;
+	font-size: 15px;
+    color: #000000;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 25px 40px 0;
+	transition: all .8s;
+}
+
+.contend-area .color-content h6:hover{
+	margin: 0;
+	font-size: 35px;
+    color: #000000;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 25px 40px 0;
+	transition: all .8s;
 }
 
 .contend-area .color-content .spes{
@@ -101,51 +121,20 @@ body {
 	padding-bottom: 10px;
 }
 
-
-.contend-area .color-content .first-color {
-	background: #f69679;
-	height: 335px;
-	transition: all .6s;
-}
-
-.contend-area .color-content .first-color:hover {
-	height: 320px;
-}
-
-.contend-area .color-content .second-color {
-	background: #e8b968;
-	height: 335px;
-	transition: all .6s;
-}
-
-.contend-area .color-content .second-color:hover {
-	height: 320px;
-}
-
 .contend-area .color-content .third-color {
 	background: #6c7fc4;
-	height: 335px;
+	height: 115px;
 	transition: all .6s;
 }
 
 .contend-area .color-content .third-color:hover {
-	height: 320px;
+	height: 145px;
 }
-
 
 .contend-area .color-content .color-title {
 	background: #FFF;
 	overflow: hidden;
 	box-shadow: 0px 3px 0px 0px rgb(234 234 234);
-}
-
-.contend-area .color-content .color-title h6{
-	margin: 0;
-	font-size: 15px;
-    color: #9197a8;
-    font-weight: 600;
-    letter-spacing: 2px;
-    padding: 25px 40px 0;
 }
 
 .contend-area .color-content .color-title p{
