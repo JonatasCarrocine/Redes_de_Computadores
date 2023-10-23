@@ -19,43 +19,30 @@
         <div class="container">
           <div class="download-content-section">
             <h1><b>Data: <span id="data-hora"></span></b></h1>
-            <p>
-			  
-			  Contagem de Visitantes:
-            </p>
+            <p> Contagem de Visitantes: </p>
             <a><?php include 'contagem_visitas.php'; ?></a>
+			<p> Local: </p>
+			<a><span id="localizacao"></a>
+			<p>Ip do cliente:</p>
+			<a><span id="client-ip"></a>
+			<p>Ip do servidor:</p>
+			<a><span id="server-ip"></a>
           </div>
         </div>
       </div>
-      <div class="color-content">
+	  <div class="color-content">
         <div class="container">
           <div class="main-content">
             <div class="w-30 spes">
-              <div class="first-color"></div>
+              <div class="third-color"><h6>FUSO HORÁRIO</h6></div>
               <div class="color-title">
-                <h6>LOCAL</h6>
-                <p><span id="localizacao"></span></p>
-              </div>
-            </div>
-            <div class="w-30 spes">
-              <div class="second-color"></div>
-              <div class="color-title">
-                <h6>IP DO CLIENTE</h6>
-                <p><span id="client-ip"></span></p>
-              </div>
-            </div>
-            <div class="w-30 spes">
-              <div class="third-color"></div>
-              <div class="color-title">
-                <h6>SO THIRSTY</h6>
-                <p>Extra nice UI comes with the app</p>
+                <p><span id="fuso-horario"></p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- FOTER AREA START -->
     <footer class="footer-area">
       <div class="container">
         <div class="text-content">
@@ -63,8 +50,7 @@
             <div class="footer-content">
               <div class="w-60">
                 <p class="first-p">
-                  Design inspirado pelo seguinte repositório <a href="https://github.com/masudranashawon/starnight-app/tree/main"
-					target="_blank"> link </a>
+                  Página com o código localizado atraves do seguinte <a href="https://github.com/JonatasCarrocine/Redes_de_Computadores/tree/main/Web-Server"> repositório </a>
                 </p>
               </div>
             </div>
@@ -79,6 +65,15 @@
     </footer>
 	
 	<script>
+		function updateInformation() {
+            var dateTimeLocation = new Date();
+            var currentDate = dateTimeLocation.toLocaleDateString();
+            var currentTime = dateTimeLocation.toLocaleTimeString();
+            var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+            document.getElementById("fuso-horario").innerHTML = timeZone;
+        }
+	
         // Função para exibir a data e hora atual
         function mostrarDataHora() {
             const dataHoraElement = document.getElementById("data-hora");
@@ -117,11 +112,33 @@
             };
             xhr.send();
         }
+		
+		function getServerIP() {
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', 'get_server_ip.php', true);
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === 4 && xhr.status === 200) {
+					var data = JSON.parse(xhr.responseText);
+					document.getElementById('server-ip').textContent = data.ip;
+				}
+			};
+			xhr.send();
+		}
+		
+		function updateClientInformation() {
+			const { city, region, country } = data;
+                    const clientInfo = "<strong>IP do Cliente:</strong> ${data.ip}<br><strong>Localização: </strong>${city}, ${region}, ${country}";
+                    document.getElementById("client-info").innerHTML = clientInfo;
+		}
+
         // Chamar a função para obter o IP
         getIP();
+		getServerIP();
+
         // Chamar as funções para mostrar a data e hora e obter a localização
         mostrarDataHora();
         obterLocalizacao();
+		updateInformation();
     </script>
   </body>
 </html>
