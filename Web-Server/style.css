@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+body {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+.container {
+	width: 85%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.w-30 {
+	width: 32%;
+	float: left;
+	overflow: hidden;
+}
+
+.w-80 {
+	width: 80%;
+	float: left;
+	overflow: hidden;
+}
+
+.w-60 {
+	width: 60%;
+	float: left;
+	overflow: hidden;
+}
+
+.header-area {
+	padding: 60px 0;
+}
+
+.header-area .header-content h1{
+    color: #000;
+    font-size: 45px;
+    font-weight: 10;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.header-area .header-content {
+	text-align: center;
+	padding-top: 30px;
+}
+
+.contend-area .download-section {
+    background: #fa6464;
+    overflow: hidden;
+    color: #FFF;
+	padding: 100px 0;
+}
+
+.contend-area .download-section h1{
+	font-weight: 100;
+	font-size: 55px;
+	line-height: 1.1;
+	margin: 0;
+	font-weight: 100;
+}
+
+.contend-area .download-section .download-content-section {
+	width: 63%;
+}
+
+.contend-area .download-section p {
+	font-weight: 300;
+	font-size: 18px;
+	margin-top: 50px;
+	line-height: 1.7;
+}
+
+.contend-area .download-section a {
+	text-decoration: none;
+	color: #FFF;
+	border: 4px solid #FFF;
+	padding: 16px 65px;
+	margin: 20px 0;
+	border-radius: 3px;
+	display: inline-block;
+	font-size: 18px;
+	letter-spacing: 2px;
+	transition: all .8s;
+}
+
+.contend-area .download-section a:hover {
+	color: #000000;
+	border-color: #000000;
+}
+
+.contend-area .color-content {
+	padding: 90px 0 90px 60px;
+	background: #f6f6f4;
+	overflow: hidden;
+}
+
+.contend-area .color-content .spes{
+	padding-right: 23px;
+	box-sizing: border-box;
+	padding-bottom: 10px;
+}
+
+
+.contend-area .color-content .first-color {
+	background: #f69679;
+	height: 335px;
+	transition: all .6s;
+}
+
+.contend-area .color-content .first-color:hover {
+	height: 320px;
+}
+
+.contend-area .color-content .second-color {
+	background: #e8b968;
+	height: 335px;
+	transition: all .6s;
+}
+
+.contend-area .color-content .second-color:hover {
+	height: 320px;
+}
+
+.contend-area .color-content .third-color {
+	background: #6c7fc4;
+	height: 335px;
+	transition: all .6s;
+}
+
+.contend-area .color-content .third-color:hover {
+	height: 320px;
+}
+
+
+.contend-area .color-content .color-title {
+	background: #FFF;
+	overflow: hidden;
+	box-shadow: 0px 3px 0px 0px rgb(234 234 234);
+}
+
+.contend-area .color-content .color-title h6{
+	margin: 0;
+	font-size: 15px;
+    color: #9197a8;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 25px 40px 0;
+}
+
+.contend-area .color-content .color-title p{
+    padding: 16px 20px 40px 40px;
+    font-style: italic;
+    color: #7a8387;
+    font-size: 16px;
+	margin: 0;
+	font-weight: 300;
+}
+
+.contend-area .color-content .main-content::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.footer-area {
+	background: #7accc8;
+	padding: 70px 0;
+}
+
+.footer-area .text-content {
+	overflow: hidden;
+}
+
+.footer-area .text-content::after{
+	content: '';
+	display: inline-block;
+	clear: both;
+}
+
+.footer-area .footer-content .first-p{
+	color: #fff;
+    line-height: 30px;
+	font-weight: 300;
+	padding-right: 186px;
+	font-size: 14px;
+}
+.footer-area .footer-content .spes {
+	margin-left: -150px;
+}
+
+.footer-area .copyright p{
+	font-size: 13px;
+    color: #FFF;
+    letter-spacing: 3px;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 30px;
+}
