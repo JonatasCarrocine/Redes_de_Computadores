@@ -37,7 +37,7 @@ We can use Ngrok to access the Web Server from another network. To do that, I wa
 - Create an account for Ngrok (https://ngrok.com/), to receive a token
 - After obtaining your token, open cmd and add it to your Ngrok configuration:
 ```
-ngrok config add-authtoken <your-auth-token>
+  ngrok config add-authtoken <your-auth-token>
 ```
 #### Start a tunnel
 
@@ -49,6 +49,6 @@ In that case, the default port will be 80
 
 After doing that, it will provide a public URL, like ```<string.ngrok-free.app>```, with that URL, you append with ``` /mysite ```, so you can access on your cellphone, like:
 ```
-https://<string.ngrok-free.app>/mysite/
+  https://<string.ngrok-free.app>/mysite/
 ```
 Keep in mind that Ngrok will provide a temporary public URL, so it will change each time you start a tunnel
