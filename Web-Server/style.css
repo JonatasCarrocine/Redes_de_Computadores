@@ -28,9 +28,9 @@ body {
 }
 
 .contend-area .download-section {
-    background: #fa6464;
-    overflow: hidden;
-    color: #FFF;
+    	background: #fa6464;
+    	overflow: hidden;
+    	color: #FFF;
 	padding: 50px 0;
 }
 
@@ -80,20 +80,20 @@ body {
 .contend-area .color-content h6{
 	margin: 0;
 	font-size: 15px;
-    color: #000000;
-    font-weight: 600;
-    letter-spacing: 2px;
-    padding: 25px 40px 0;
+    	color: #000000;
+    	font-weight: 600;
+    	letter-spacing: 2px;
+    	padding: 25px 40px 0;
 	transition: all .8s;
 }
 
 .contend-area .color-content h6:hover{
 	margin: 0;
 	font-size: 35px;
-    color: #000000;
-    font-weight: 600;
-    letter-spacing: 2px;
-    padding: 25px 40px 0;
+    	color: #000000;
+    	font-weight: 600;
+    	letter-spacing: 2px;
+    	padding: 25px 40px 0;
 	transition: all .8s;
 }
 
@@ -120,11 +120,11 @@ body {
 }
 
 .contend-area .color-content .color-title p{
-    font-weight: 300;
+    	font-weight: 300;
 	padding: 16px 20px 40px 40px;
-    font-style: italic;
-    color: #7a8387;
-    font-size: 16px;
+    	font-style: italic;
+    	color: #7a8387;
+    	font-size: 16px;
 	margin: 0;
 }
 
@@ -151,7 +151,7 @@ body {
 
 .footer-area .footer-content .first-p{
 	color: #fff;
-    line-height: 30px;
+    	line-height: 30px;
 	font-weight: 300;
 	padding-right: 186px;
 	font-size: 14px;
@@ -163,8 +163,8 @@ body {
 
 .footer-area .copyright p{
 	font-size: 15px;
-    color: #FFF;
-    letter-spacing: 3px;
+    	color: #FFF;
+    	letter-spacing: 3px;
 	font-weight: 600;
 	text-align: center;
 	margin-bottom: 30px;
