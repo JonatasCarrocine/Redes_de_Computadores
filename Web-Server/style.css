@@ -10,26 +10,13 @@ body {
 	overflow: hidden;
 }
 
-.w-30 {
-	width: 32%;
-	float: left;
-	overflow: hidden;
-}
-
-.w-80 {
-	width: 80%;
-	float: left;
-	overflow: hidden;
-}
-
-.w-60 {
-	width: 60%;
-	float: left;
-	overflow: hidden;
-}
-
 .header-area {
 	padding: 60px 0;
+}
+
+.header-area .header-content {
+	text-align: center;
+	padding-top: 30px;
 }
 
 .header-area .header-content h1{
@@ -38,11 +25,6 @@ body {
     font-weight: 10;
     margin: 0;
     margin-bottom: 50px;
-}
-
-.header-area .header-content {
-	text-align: center;
-	padding-top: 30px;
 }
 
 .contend-area .download-section {
@@ -60,8 +42,8 @@ body {
 	font-weight: 100;
 }
 
-.contend-area .download-section .download-content-section {
-	width: 63%;
+.contend-area .download-section .infos {
+	width: 75%;
 }
 
 .contend-area .download-section p {
@@ -117,14 +99,14 @@ body {
 
 .contend-area .color-content .spes{
 	padding-right: 23px;
-	box-sizing: border-box;
 	padding-bottom: 10px;
+	box-sizing: border-box;
 }
 
 .contend-area .color-content .third-color {
 	background: #6c7fc4;
 	height: 115px;
-	transition: all .6s;
+	transition: all .7s;
 }
 
 .contend-area .color-content .third-color:hover {
@@ -138,12 +120,12 @@ body {
 }
 
 .contend-area .color-content .color-title p{
-    padding: 16px 20px 40px 40px;
+    font-weight: 300;
+	padding: 16px 20px 40px 40px;
     font-style: italic;
     color: #7a8387;
     font-size: 16px;
 	margin: 0;
-	font-weight: 300;
 }
 
 .contend-area .color-content .main-content::after {
@@ -154,7 +136,7 @@ body {
 
 .footer-area {
 	background: #7accc8;
-	padding: 70px 0;
+	padding: 50px 0;
 }
 
 .footer-area .text-content {
@@ -174,15 +156,34 @@ body {
 	padding-right: 186px;
 	font-size: 14px;
 }
+
 .footer-area .footer-content .spes {
-	margin-left: -150px;
+	margin-left: -140px;
 }
 
 .footer-area .copyright p{
-	font-size: 13px;
+	font-size: 15px;
     color: #FFF;
     letter-spacing: 3px;
 	font-weight: 600;
 	text-align: center;
 	margin-bottom: 30px;
+}
+
+.w-30 {
+	width: 32%;
+	float: left;
+	overflow: hidden;
+}
+
+.w-80 {
+	width: 80%;
+	float: left;
+	overflow: hidden;
+}
+
+.w-60 {
+	width: 60%;
+	float: left;
+	overflow: hidden;
 }
