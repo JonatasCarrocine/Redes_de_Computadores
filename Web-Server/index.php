@@ -17,7 +17,7 @@
     <div class="contend-area">
       <div class="download-section">
         <div class="container">
-          <div class="download-content-section">
+          <div class="infos">
             <h1><b>Data: <span id="data-hora"></span></b></h1>
             <p> Contagem de Visitantes: </p>
             <a><?php include 'contagem_visitas.php'; ?></a>
