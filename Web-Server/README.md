@@ -7,7 +7,7 @@ This is a project about a creation of a Web Server using Apache, this site displ
 
 
 
-## Instructions
+## Author
 
  - Jonatas Carrocine
 
@@ -33,6 +33,14 @@ This is a project about a creation of a Web Server using Apache, this site displ
   127.0.0.1/mysite/
 ```
 
-## Hints
+5. Acessing from another network using Ngrok
 
-- Server needs to run before you start the clients, otherwise you'll get an error 
+We can use Ngrok to access the Web Server from another network.
+
+- Install Ngrok
+
+- Start a tunnel
+```
+  ngrok http 80
+```
+After doing that, it will provide a public URL, with that URL, you append with ``` /mysite ```, so you can access on your cellphone
