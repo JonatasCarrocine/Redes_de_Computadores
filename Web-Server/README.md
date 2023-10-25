@@ -11,36 +11,44 @@ This is a project about a creation of a Web Server using Apache, this site displ
 
  - Jonatas Carrocine
 
-## Getting Started
+## Installing Apache and PHP
 
-1. Open two CMD and compile the server class in one terminal and the client class on another terminal
-```
-  javac Client.java
-  javac Server.java
-```
+Since I use Windows, I watched this video to configure Apache and PHP: (https://www.youtube.com/watch?v=3EAj9tsXLFU&list=LL&index=1)
 
-2. Start the server
-```
-  java Server
-```
+- I created my files at directory ``` C:/Apache24/htdocs/mysite ```
 
-3. Start the client
-```
-  java Client
-```
-4. After that, you can access the website at:
+- After watching the video, you can access the website at:
+
 ```
   127.0.0.1/mysite/
 ```
 
-5. Acessing from another network using Ngrok
+## Acessing from another network using Ngrok
 
-We can use Ngrok to access the Web Server from another network.
+We can use Ngrok to access the Web Server from another network. To do that, I watched this video: (https://www.youtube.com/watch?v=aFwrNSfthxU)
+
+### Steps
 
 - Install Ngrok
+- Unzip the file and extract to ``` C:\ngrok ```
+- Go to Edit the system environment variables -> Environment Variables -> System Variables -> Path -> Edit
+- Create a new environment variable, using ``` C:\ngrok ```
 
-- Start a tunnel
+- Create an account for Ngrok (https://ngrok.com/), to receive a token
+- After obtaining your token, open cmd and add it to your Ngrok configuration:
+```
+ngrok config add-authtoken <your-auth-token>
+```
+#### Start a tunnel
+
+Start a tunnel to your local web server
 ```
   ngrok http 80
 ```
-After doing that, it will provide a public URL, with that URL, you append with ``` /mysite ```, so you can access on your cellphone
+In that case, the default port will be 80
+
+After doing that, it will provide a public URL, like ```<string.ngrok-free.app>```, with that URL, you append with ``` /mysite ```, so you can access on your cellphone, like:
+```
+https://<string.ngrok-free.app>/mysite/
+```
+Keep in mind that Ngrok will provide a temporary public URL, so it will change each time you start a tunnel
