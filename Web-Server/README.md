@@ -2,7 +2,9 @@
 
 This is a project about a creation of a Web Server using Apache, this site display the current time and date, time zone, server and client IP, latitude, longitude, and it also shows how many requests have been made for this site, providing dynamic information.
 
-![image](https://github.com/JonatasCarrocine/Redes_de_Computadores/assets/39377609/5de09857-83df-44b5-a62d-3fea9f7f3f32)
+![image](https://github.com/JonatasCarrocine/Redes_de_Computadores/assets/39377609/c1525950-a61e-4545-bd55-13a52db14869)
+![image](https://github.com/JonatasCarrocine/Redes_de_Computadores/assets/39377609/e6d5f7f4-f140-487e-9dda-6c871e164519)
+
 
 
 ## Instructions
